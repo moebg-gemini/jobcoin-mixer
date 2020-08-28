@@ -1,0 +1,5 @@
+{
+  "api_base_url": "http://jobcoin.gemini.com/tinderbox-unmapped/api",
+  "client_addr_min": 3,
+  "client_default_addr_length": 16
+}
