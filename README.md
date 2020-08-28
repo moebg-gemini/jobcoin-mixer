@@ -5,10 +5,10 @@
 * Overview
 * Workflow
 * Design Decisions
-* Extensions
 * Usage
 * System Components
 * Dependencies
+* Extensions
 
 ## Overview
 
@@ -25,24 +25,6 @@ The JobCoin mixer allows users to mix their JobCoin to `N` number of output addr
 ## Design Decisions
 
 Currently the application runs the main objects through a CLI program, the Mixer application can be extended to be a web service a frontend can communicate with and send requests to. This can be done in flask.
-
-## Extensions
-
-These are features and extensions to the mixer that can be added in the future.
-
-* Mixing Algorithm: The current mixing algorithm evenly sends out coin amounts to all output addresses.
-* Double Mixing
-* Log events throughout the application
-* Make the mixer an HTTP service and have clients only interact with the Mixer through API calls
-* Have a separate frontend client that interacts with the Mixer's HTTP service
-* CI/CD implementation
-* Time delay in mixing
-* Adding a task queue for mixer request jobs
-* Using a database to keep track of mixing jobs instead of an in-memory dictionary
-* Have user put their own default address to transfer from, currently we transfer on behalf of a default user address on the jobcoin network
-* Random distribution of X coins between N addresses
-* Using a config service for a mixer instance
-* Custom errors
 
 ## Usage
 
@@ -83,3 +65,21 @@ The mixer application can be configured with the `config.json` file in the root 
 * `click`: cli library for python
 * `pytest`: testing framework
 * `requests`: HTTP library for python
+
+## Extensions
+
+These are features and extensions to the mixer that can be added in the future.
+
+* Mixing Algorithm: The current mixing algorithm evenly sends out coin amounts to all output addresses.
+* Double Mixing
+* Log events throughout the application
+* Make the mixer an HTTP service and have clients only interact with the Mixer through API calls
+* Have a separate frontend client that interacts with the Mixer's HTTP service
+* CI/CD implementation
+* Time delay in mixing
+* Adding a task queue for mixer request jobs
+* Using a database to keep track of mixing jobs instead of an in-memory dictionary
+* Have user put their own default address to transfer from, currently we transfer on behalf of a default user address on the jobcoin network
+* Random distribution of X coins between N addresses
+* Using a config service for a mixer instance
+* Custom errors
